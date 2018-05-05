@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Search</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href=".index.html">UFO Search <img class="nav-ufo" src="ufo.jpg"></a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>UFO Sightings</h1>
+      <p>Search for Truth</p>
+    </div>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="col-md-2" style="float: right">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              	<div class="panel-body">
+                	<div class="form-group">
+                  	<ul class="list-group" id="filters">
+                    <li class="filter list-group-item">
+                      <label for="date">Enter a Date</label>
+                      <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="state">Select a Country</label>
+                      <select id="country">
+                        <option default value=" ">all</option>
+                      </select>
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="state">Enter a State</label>
+                      <input class="form-control" id="state" type="text" placeholder="nm">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="city">Enter a City</label>
+                      <input class="form-control" id="city" type="text" placeholder="Roswell">
+                    </li>
+                    <li class="filter list-group-item">
+                      <label for="shape">Select a Shape</label>
+                      <select id="shape">
+                        <option default value=" ">all</option>
+                      </select>
+                    </li>
+                    <li class="list-group-item">
+                      <label for="count">Results Per Page</label>
+                      <select id="count">
+                        <option default value="100">100</option>
+                        <option value="50">50</option>
+                        <option value="25">25</option>
+                      </select>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <h1 class="text-center loader" id="loader">Loading...</h1>
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="col-sm-12 col-sm-offset-0 col-md-2 col-md-offset-10 text-center pagination-container">
+          <ul class="pagination" id="pagination">
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">UFO Sightings</span>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
